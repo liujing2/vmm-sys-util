@@ -1,0 +1,11 @@
+language: rust
+
+rust:
+  - stable
+  - nightly
+
+script:
+  - cargo build -- release
+  - cargo test
+  - cargo fmt --all -- --check
+  - cargo clippy --all-targets --all-features -- -D warnings
