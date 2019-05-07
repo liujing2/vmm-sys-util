@@ -1,9 +1,9 @@
 // Copyright 2019 Intel Corporation. All Rights Reserved.
-// SPDX-License-Identifier: dual license MIT or Apache-2.0
+// SPDX-License-Identifier: Apache-2.0
 //
 // Copyright 2018 The Chromium OS Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE.BSD file.
+// found in the LICENSE-BSD-3-clause file.
 
 use std::fs::File;
 use std::mem;
@@ -162,8 +162,7 @@ mod tests {
 
         let dur = Duration::from_millis(200);
         let interval = Duration::from_millis(100);
-        tfd.reset(dur, Some(interval))
-            .expect("failed to arm timer");
+        tfd.reset(dur, Some(interval)).expect("failed to arm timer");
 
         sleep(dur * 3);
 
